@@ -1,4 +1,7 @@
 {
   "name": "EventHub",
-  "slug": "EventHub"
+  "slug": "EventHub",
+  "android": {
+    "package": "com.anonymous.EventHub"
+  }
 }
