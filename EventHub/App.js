@@ -14,7 +14,7 @@ export default function App() {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setisShowSplash(false);
-    }, 15000);
+    }, 1500);
     return () => clearTimeout(timeout);
   }, []);
   
