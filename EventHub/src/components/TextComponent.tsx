@@ -6,15 +6,16 @@ import { globalStyles } from "../styles/globalStyle";
 
 interface Props {
   text?: string;
-  fontFamily?: string;
+  font?: string;
   size?: number;
   color?: string;
   styles?: StyleProp<TextStyle>;
   flex?: number;
+  title?: boolean
 }
 
 const TextComponent = (props: Props) => {
-  const { text, fontFamily, size, styles, color, flex } = props;
+  const { text, font, size, styles, color, flex, title } = props;
   return (
     <Text
       style={[
@@ -22,8 +23,8 @@ const TextComponent = (props: Props) => {
         {
           color: color ?? appColors.text,
           flex: flex ?? 0,
-          fontSize: size ?? 14,
-          fontFamily: fontFamilies.regular,
+          fontSize: size ?? title ? 24 : 14,
+          fontFamily: font ?? title ? fontFamilies.bold : fontFamilies.regular,
         },
         styles
       ]}
